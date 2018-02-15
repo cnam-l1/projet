@@ -1,0 +1,78 @@
+=====================================================
+PROJET
+=====================================================
+
+##### PROCESSUS #####
+
+Gérer son budget alimentaire
+
+##### PROBLEMATIQUE #####
+
+-> gestion de ses courses
+
+-> gestion du budget
+
+-> manque de repas équilibré
+
+
+##### SOLUTION #####
+
+* listé les recettes que l'on veut faire
+
+* ajout de recettes manuelement
+
+* création d'un liste de course en fonction
+
+* Tout cela via une application mobile
+
+
+=====================================================
+NEXT TIME
+=====================================================
+
+1 - Document Definition du projet (aujourd'hui)
+
+        -> decrire le processus metier existant (ecrit court dans un premier 
+           temps par du texte, double page)
+
+        -> decrire le probleme qui se pose dans le processus existant.
+
+        -> solution envisagee
+
+        -> besoins
+                - role metier
+                - services attendus
+
+        -> contraintes qui peuvent se posees
+                - legales
+                - economiques
+
+        -> organisation groupe
+                - membres
+                - outils
+
+2 - Analyse des exigences (mi - mars)
+
+        -> modeles de processus existant et transforme
+
+        -> diagrammes d'exigences
+
+        -> referenciel des exigences 
+                - comportement elementaire et precis du logicielcomment decrire 
+                  une exigence
+
+3 - Analyse fonctionelle (fin mars)
+
+        -> cas dutilisation / sequence
+
+        -> modele de domaine
+
+4 - Architecture (fin avril)
+
+        -> composants
+
+        -> connecteurs
+
+        -> framework
+
+5 - Codage et integration

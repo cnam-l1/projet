@@ -1,0 +1,91 @@
+===========================
+Processus metier existant
+===========================
+
+Achat de denrees alimentaire (faire ses courses)
+
+Ce processus metier intervient lorsqu'une personne souhaite faire ses courses
+alimentaire. Pour cela il y a plusieurs manieres de proceder, par exemple :
+
+        -> nous pouvons aller faire nos courses avec un minimum d'organisation 
+           sur ce que nous allons acheter.
+
+        -> nous pouvons faire une liste au preable dans le cas ou une organisation
+           est pre etabli.
+        
+Nous avons aussi constate que la frequence d'achat differe selon le profil de
+l'utilisateur ainsi que le lieu, supermarche, commerce de proximite, marche etc...
+
+=========================================
+Decrire le probleme existant dans ce proc
+=========================================
+
+Oubli de denree :
+        -> Le probleme principale qui se pose lors de ce processus est l'oubli 
+           d'aliment particulierement lorsqu'on souhaite achter des aliments
+           pour des recettes specifiques.
+
+Perte de temps : 
+        -> dans la recherche de denree durant les courses ainsi que les risques
+           d'aller retour de la maison au commerce.
+
+Surplus d'aliments :
+        -> le manque de preparation peut entrainer l'achat d'aliment non necessaire
+           au besoin engeandrant un gaspillage economique par l'achat compulsif
+           ou l'oubli du besoin initial.
+
+
+Oubli de la liste :
+        -> malgres la creation d'une liste, il arrive que l'utilisateur l'oublie
+           chez lui.
+
+======================================
+Solutions envisagees
+======================================
+
+La solution envisage est que le consomateur puisse creer une liste de commissions
+a partir de recettes qu'il aura precedemment enregistrees. 
+La possibilite d'adapter les quantites selon son besoin, finalise l'automatisation
+de la tache.
+
+Grace a cette solution logiciel, le consomateur pourra donc optimiser la gestion
+de ses commissions.
+
+=======================================
+Besoins
+=======================================
+
+Role metier :
+        -> Le consomateur est l'unique acteur de ce processus metier.
+
+Service attendus :
+        -> enregistrement de recettes : lister les ingredients et leur quantite
+
+        -> creation d'une liste de commissions en fonction des recettes selectionnees
+          et du nombre de personnes.
+
+        -> generation de cette liste a partir des options choisies.
+
+        -> possibilite de finaliser cette liste (suppression, ajout d'aliments libre)
+
+======================================
+Contraintes
+======================================
+
+
+
+======================================
+Organisation de groupe
+======================================
+
+Membres du groupe :
+        -> Melissa, Hugo, Morgan, Mathieu
+
+Outils (non definitif)
+        -> Plateform de developement, Android Studio
+        -> Language de modelisation UML
+        -> Language de developpement Android
+        -> Language de base de donnees Sql / sqlite
+        -> Gestion de version Git
+        -> Traitement de texte LibreOffice
+        -> Gestionnaire des taches SCRUM Trello
