@@ -87,10 +87,3 @@ id = 1.7
 text = "s'assurer d'une execution rapide de l'application et d'une consomation
         des ressources, processeur et memoire limitees." (A DECLINER AVEC DES
         SOUS EXIGENCES TECHNIQUES)
-
-
-
-
-
-
-
