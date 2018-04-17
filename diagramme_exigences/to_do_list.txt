@@ -1,0 +1,8 @@
+1 - ecrire l'exigence principale
+
+2 - placer autour les groupes d'exigences tels que
+        -> exigences marketing          -> DesignRequirements
+        -> exigences fonctionelles      -> FonctionalRequirements
+        -> exigences environnementales  -> Rational "rappel des normes"
+        -> exigences techniques         -> Usability,Performance,PhysicalRequirements
+        -> exigences economiques        -> BuisnessRequirements
