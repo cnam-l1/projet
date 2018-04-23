@@ -64,7 +64,29 @@ text = "permettre de generer une liste de commissions a partir d'une liste de
         text = "permet d'adapter la liste de commissions et leurs quantites en
                 fonction du besoin" (A DECLINER!!! POFFINER)
 
+"legal requirements"
+licence logiciel
+id = 1.4
+text = "s'assurer d'une licence logicielle conforme au reglement du CNAM"
 
+"legal requirements"
+licence des outils de dev
+id = 1.5
+text = "utiliser uniquement des outils open-source"
+
+
+"technical requirements"
+developper pour la plateform android
+id = 1.6
+text = "developper une application mobile android" (SATISFY: SDK ANDROID INTELLIJ)
+
+
+"technical requirements"
+optimiser les performances
+id = 1.7
+text = "s'assurer d'une execution rapide de l'application et d'une consomation
+        des ressources, processeur et memoire limitees." (A DECLINER AVEC DES
+        SOUS EXIGENCES TECHNIQUES)
 
 
 
