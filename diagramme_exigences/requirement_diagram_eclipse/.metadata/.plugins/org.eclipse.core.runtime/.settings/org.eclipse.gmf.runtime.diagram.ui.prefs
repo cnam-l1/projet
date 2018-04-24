@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.gmf.psize=139
+org.eclipse.gmf.runtime.diagram.ui.paletteCustomizations=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.gmf.runtime.diagram.ui.paletteCustomizations>&\#x0A;<org.eclipse.papyrus.sysML.req.palette.node label\="Requirement">&\#x0A;<org.eclipse.papyrus.sysML.req.palette.node.Requirement label\="Requirement"/>&\#x0A;</org.eclipse.papyrus.sysML.req.palette.node>&\#x0A;</org.eclipse.gmf.runtime.diagram.ui.paletteCustomizations>

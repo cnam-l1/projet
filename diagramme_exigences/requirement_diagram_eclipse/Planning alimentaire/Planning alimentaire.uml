@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.4/SysML/ModelElements" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.4/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements">
+  <uml:Model xmi:id="_HNjywEcXEeiBj_yDSZJb8Q" name="Planning alimentaire">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Av_cgEeSEeiBj_yDSZJb8Q">
+      <body>Marketing Requirement</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="__swBYEeSEeiBj_yDSZJb8Q">
+      <body>Marketing Requirement</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_eIjcgEeTEeiBj_yDSZJb8Q">
+      <body>Legal Requirement</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_givnAEeTEeiBj_yDSZJb8Q">
+      <body>Technical Requirement</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_izs9AEeTEeiBj_yDSZJb8Q">
+      <body>Functional Requirement</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_GC6u4Ee3Eei-84wpzk5l_Q" annotatedElement="_p8z_0Ee2Eei-84wpzk5l_Q">
+      <body>Afin d'éviter les potentiels doublons du a une faute de frappe ou d'inattention, le choix d'une base de données en ligne avec les ingrédients préalablement enregistrés a été priviligié.</body>
+    </ownedComment>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_HdXwYEcXEeiBj_yDSZJb8Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Hd4GsEcXEeiBj_yDSZJb8Q">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oXJCwEcXEeiBj_yDSZJb8Q" name="Planning alimentaire">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_qMqvEEcZEeiBj_yDSZJb8Q" name="Gerer une recette">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Q9m3cEeOEeiBj_yDSZJb8Q" name="Enregistrer une recette">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="__Mej4EeoEeibxvYG8VBq4g" name="Lister les ingrédients"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_McBuYEepEeibxvYG8VBq4g" name="Choisir le nombre de personne"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_W7i1gEeOEeiBj_yDSZJb8Q" name="Modifier une recette">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_GIHD0EeqEeibxvYG8VBq4g" name="Modifier les quantités"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_-rzqUEepEeibxvYG8VBq4g" name="Modifier la liste d'ingrédients"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_cy0K4EeOEeiBj_yDSZJb8Q" name="Supprimer une recette" visibility="public"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_evcTQEcYEeiBj_yDSZJb8Q" name="Experience utilisateur">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_GXjf8EeoEeibxvYG8VBq4g" name="Téléchargement via Google Play"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_ioeX4EeoEeibxvYG8VBq4g" name="Optimiser la navigabilité"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_jPz1YEc_EeiBj_yDSZJb8Q" name="gerer une liste de commissions">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_vsjNcEdAEeiBj_yDSZJb8Q" name="Creer une liste de recette"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_MVOB8EeMEeiBj_yDSZJb8Q" name="Choisir le nombre de personne">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_ijgR8EegEeibxvYG8VBq4g" name="Choix global"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_720JQEegEeibxvYG8VBq4g" name="Choix par recette"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_89f0kEeMEeiBj_yDSZJb8Q" name="Générer liste de commissions"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_MdDS0EeNEeiBj_yDSZJb8Q" name="Finalisation de la liste de commissions">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_fWsxAEebEeibxvYG8VBq4g" name="Supprimer un ingrédient"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="__TEnAEebEeibxvYG8VBq4g" name="Modifier la quantité"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_KQ4_cEecEeibxvYG8VBq4g" name="Ajouter un ingrédient"/>
+        </nestedClassifier>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_c1kHcEePEeiBj_yDSZJb8Q" name="Licence logiciel"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_j-eq4EePEeiBj_yDSZJb8Q" name="Développer pour la plateform android"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_Df_7cEeREeiBj_yDSZJb8Q" name="Licence des outils de dev"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_Zz7QgEeREeiBj_yDSZJb8Q" name="Optimiser les performances">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_KR5RwEesEeibxvYG8VBq4g" name="Utilisation des données"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_SKCSsEesEeibxvYG8VBq4g" name="Utilisation de la batterie"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_e5PJMEesEeibxvYG8VBq4g" name="Optimisation ressources"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_p8z_0Ee2Eei-84wpzk5l_Q" name="Avoir une BDD"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pqjncEeQEeiBj_yDSZJb8Q" name="SDK ANDROID INTELLIJ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_2DprEEeQEeiBj_yDSZJb8Q" name="Satisfy" client="_j-eq4EePEeiBj_yDSZJb8Q" supplier="_pqjncEeQEeiBj_yDSZJb8Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_eWDicEeSEeiBj_yDSZJb8Q" name="Satisfy" client="_pqjncEeQEeiBj_yDSZJb8Q" supplier="_j-eq4EePEeiBj_yDSZJb8Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_K0JrQEehEeibxvYG8VBq4g" name="" client="_720JQEegEeibxvYG8VBq4g" supplier="_MVOB8EeMEeiBj_yDSZJb8Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_OK0FEEehEeibxvYG8VBq4g" name="" client="_ijgR8EegEeibxvYG8VBq4g" supplier="_MVOB8EeMEeiBj_yDSZJb8Q"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ywFpwEeqEeibxvYG8VBq4g" name="Sauvegarder la recette en BDD"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_DMH-YEerEeibxvYG8VBq4g" name="" client="_ywFpwEeqEeibxvYG8VBq4g" supplier="_Q9m3cEeOEeiBj_yDSZJb8Q"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdEOYEcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdK8EEcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdOmcEcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdPNgEcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdS34EcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdS34UcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdTe8EcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdTe8UcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdTe8kcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdUGAEcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdUtEEcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdUtEUcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdUtEkcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdUtE0cXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdVUIEcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdVUIUcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdV7MEcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdV7MUcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdWiQEcXEeiBj_yDSZJb8Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdXJUEcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Requirements:Requirement xmi:id="_ohtUAEcXEeiBj_yDSZJb8Q" base_Class="_oXJCwEcXEeiBj_yDSZJb8Q" id="1" text="Gérer l'achat de denrées alimentaires"/>
+  <Requirements:Requirement xmi:id="_evmrUEcYEeiBj_yDSZJb8Q" base_Class="_evcTQEcYEeiBj_yDSZJb8Q" id="1.1" text="Le produit doit être accessible et facile d'utilisation pour tout public"/>
+  <Requirements:Requirement xmi:id="_qM1uMEcZEeiBj_yDSZJb8Q" base_Class="_qMqvEEcZEeiBj_yDSZJb8Q" id="1.2" text="Permettre de créer une recette"/>
+  <Requirements:Requirement xmi:id="_jP58AEc_EeiBj_yDSZJb8Q" base_Class="_jPz1YEc_EeiBj_yDSZJb8Q" id="1.3" text="Permettre de générer une liste de commissions a partir d'une liste de recettes"/>
+  <Requirements:Requirement xmi:id="_vspUEEdAEeiBj_yDSZJb8Q" base_Class="_vsjNcEdAEeiBj_yDSZJb8Q" id="1.3.1" text="Permettre de creer une liste de recettes"/>
+  <Requirements:Requirement xmi:id="_MVS6cEeMEeiBj_yDSZJb8Q" base_Class="_MVOB8EeMEeiBj_yDSZJb8Q" id="1.3.2" text="Permettre de definir la quantité de chaques ingredients en fonction du nombre de personnes"/>
+  <Requirements:Requirement xmi:id="_896rUEeMEeiBj_yDSZJb8Q" base_Class="_89f0kEeMEeiBj_yDSZJb8Q" id="1.3.3" text="Permettre de générer une liste d'ingredients en fonction des options enregistrées"/>
+  <Requirements:Requirement xmi:id="_MdQHIEeNEeiBj_yDSZJb8Q" base_Class="_MdDS0EeNEeiBj_yDSZJb8Q" id="1.3.4" text="Permettre d'adapter la liste de commissions et leurs quantités en fonction du besoin"/>
+  <Requirements:Requirement xmi:id="_Q9rv8EeOEeiBj_yDSZJb8Q" base_Class="_Q9m3cEeOEeiBj_yDSZJb8Q" id="1.2.1" text="Permettre de lister les ingredients et leurs quantites pour n personnes"/>
+  <Requirements:Requirement xmi:id="_W7nuAEeOEeiBj_yDSZJb8Q" base_Class="_W7i1gEeOEeiBj_yDSZJb8Q" id="1.2.2" text="Permettre de modifier une recette"/>
+  <Requirements:Requirement xmi:id="_cy5DYEeOEeiBj_yDSZJb8Q" base_Class="_cy0K4EeOEeiBj_yDSZJb8Q" id="1.2.3" text="Permettre de supprimer une recette"/>
+  <Requirements:Requirement xmi:id="_c1o_8EePEeiBj_yDSZJb8Q" base_Class="_c1kHcEePEeiBj_yDSZJb8Q" id="1.4" text="S'assurer d'une licence logiciel conforme au reglement du CNAM"/>
+  <Requirements:Requirement xmi:id="_j-i8UEePEeiBj_yDSZJb8Q" base_Class="_j-eq4EePEeiBj_yDSZJb8Q" id="1.6" text="Développer une application mobile android"/>
+  <Requirements:Satisfy xmi:id="_2D1RQEeQEeiBj_yDSZJb8Q" base_DirectedRelationship="_2DprEEeQEeiBj_yDSZJb8Q" base_Abstraction="_2DprEEeQEeiBj_yDSZJb8Q"/>
+  <Requirements:Requirement xmi:id="_DgEz8EeREeiBj_yDSZJb8Q" base_Class="_Df_7cEeREeiBj_yDSZJb8Q" id="1.5" text="Utiliser uniquement des outils open-source"/>
+  <Requirements:Requirement xmi:id="_Z0AJAEeREeiBj_yDSZJb8Q" base_Class="_Zz7QgEeREeiBj_yDSZJb8Q" id="1.7" text="S'assurer d'une execution rapide de l'application et d'une consomation des ressources, processeur et memoire limitees"/>
+  <Requirements:Satisfy xmi:id="_eWPIoEeSEeiBj_yDSZJb8Q" base_DirectedRelationship="_eWDicEeSEeiBj_yDSZJb8Q" base_Abstraction="_eWDicEeSEeiBj_yDSZJb8Q"/>
+  <Blocks:Block xmi:id="_sZ8T8EeSEeiBj_yDSZJb8Q" base_Class="_pqjncEeQEeiBj_yDSZJb8Q"/>
+  <Requirements:Requirement xmi:id="_faE1IEebEeibxvYG8VBq4g" base_Class="_fWsxAEebEeibxvYG8VBq4g" id="1.3.4.1" text="Pouvoir supprimer un ingrédient dont on a pas besoin"/>
+  <Requirements:Requirement xmi:id="__TOYAEebEeibxvYG8VBq4g" base_Class="__TEnAEebEeibxvYG8VBq4g" id="1.3.4.3" text="Permet à la quantité d'être modifiée"/>
+  <Requirements:Requirement xmi:id="_KQ-fAEecEeibxvYG8VBq4g" base_Class="_KQ4_cEecEeibxvYG8VBq4g" id="1.3.4.2" text="Ajouter un ingrédient independamment des recettes"/>
+  <Requirements:Requirement xmi:id="_ijmYkEegEeibxvYG8VBq4g" base_Class="_ijgR8EegEeibxvYG8VBq4g" id="1.3.2.1" text="Choisir un même nombre de personne pour toutes les recettes"/>
+  <Requirements:Requirement xmi:id="_726P4EegEeibxvYG8VBq4g" base_Class="_720JQEegEeibxvYG8VBq4g" id="1.3.2.2" text="Choisir le nombre de personne indépendamment pour chaque recette"/>
+  <Requirements:DeriveReqt xmi:id="_K0V4gEehEeibxvYG8VBq4g" base_DirectedRelationship="_K0JrQEehEeibxvYG8VBq4g" base_Abstraction="_K0JrQEehEeibxvYG8VBq4g"/>
+  <Requirements:DeriveReqt xmi:id="_OK-dIEehEeibxvYG8VBq4g" base_DirectedRelationship="_OK0FEEehEeibxvYG8VBq4g" base_Abstraction="_OK0FEEehEeibxvYG8VBq4g"/>
+  <Requirements:Requirement xmi:id="_GXpmkEeoEeibxvYG8VBq4g" base_Class="_GXjf8EeoEeibxvYG8VBq4g" id="1.1.1" text="L'application devra être téléchargeable sur la platerforme Google Play"/>
+  <Requirements:Requirement xmi:id="_iojQYEeoEeibxvYG8VBq4g" base_Class="_ioeX4EeoEeibxvYG8VBq4g" id="1.1.2" text="La navigabilité et le paramettrage de l'application devra être simple"/>
+  <Requirements:Requirement xmi:id="__MpjAEeoEeibxvYG8VBq4g" base_Class="__Mej4EeoEeibxvYG8VBq4g" id="1.2.1.1" text="Lister les ingrédients nécessaires à la recette ainsi que leur quantité"/>
+  <Requirements:Requirement xmi:id="_McGm4EepEeibxvYG8VBq4g" base_Class="_McBuYEepEeibxvYG8VBq4g" id="1.2.1.2" text="Sélectionner le nombre de personne pour laquelle la quantité d'ingrédient a été renseigné."/>
+  <Requirements:Requirement xmi:id="_-r4i0EepEeibxvYG8VBq4g" base_Class="_-rzqUEepEeibxvYG8VBq4g" id="1.2.2.1" text="Permet d'ajouter ou supprimer des ingrédients"/>
+  <Requirements:Requirement xmi:id="_GIMjYEeqEeibxvYG8VBq4g" base_Class="_GIHD0EeqEeibxvYG8VBq4g" id="1.2.2.2" text="Permet de modifier la quantité de chaque ingrédient"/>
+  <Blocks:Block xmi:id="_0509cEeqEeibxvYG8VBq4g" base_Class="_ywFpwEeqEeibxvYG8VBq4g"/>
+  <Requirements:Satisfy xmi:id="_DMd8oEerEeibxvYG8VBq4g" base_DirectedRelationship="_DMH-YEerEeibxvYG8VBq4g" base_Abstraction="_DMH-YEerEeibxvYG8VBq4g"/>
+  <Requirements:Requirement xmi:id="_KR-KQEesEeibxvYG8VBq4g" base_Class="_KR5RwEesEeibxvYG8VBq4g" id="1.7.1" text="Le flux de données transitants via l'application doit être limités"/>
+  <Requirements:Requirement xmi:id="_SKHLMEesEeibxvYG8VBq4g" base_Class="_SKCSsEesEeibxvYG8VBq4g" id="1.7.2" text="L'application devra pouvoir rester ouverte sans consommer beaucoup de batterie."/>
+  <Requirements:Requirement xmi:id="_e5VP0EesEeibxvYG8VBq4g" base_Class="_e5PJMEesEeibxvYG8VBq4g" id="1.7.3" text="Optimiser l'utilisation du processeur et de la mémoire pour que l'application soit la fluide possible"/>
+  <Requirements:Requirement xmi:id="_p9G6wEe2Eei-84wpzk5l_Q" base_Class="_p8z_0Ee2Eei-84wpzk5l_Q" id="1.8" text="Les ingrédients seront stockés dans une base de données"/>
+  <ModelElements:Rationale xmi:id="_GDR7QEe3Eei-84wpzk5l_Q" base_Comment="_GC6u4Ee3Eei-84wpzk5l_Q"/>
+</xmi:XMI>
