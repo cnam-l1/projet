@@ -1665,11 +1665,11 @@
     </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_eWjRsEeSEeiBj_yDSZJb8Q" type="Abstraction_NameLabel">
       <styles xmi:type="notation:BooleanValueStyle" xmi:id="_k5hRoEehEeibxvYG8VBq4g" name="IS_UPDATED_POSITION" booleanValue="true"/>
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_eWjRsUeSEeiBj_yDSZJb8Q" y="40"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_eWjRsUeSEeiBj_yDSZJb8Q" x="-19" y="-42"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_eWjRskeSEeiBj_yDSZJb8Q" type="Abstraction_StereotypeLabel">
       <styles xmi:type="notation:BooleanValueStyle" xmi:id="_k5h4sEehEeibxvYG8VBq4g" name="IS_UPDATED_POSITION" booleanValue="true"/>
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_eWjRs0eSEeiBj_yDSZJb8Q" y="60"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_eWjRs0eSEeiBj_yDSZJb8Q" x="-39" y="-50"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_eWiqoUeSEeiBj_yDSZJb8Q"/>
     <element xmi:type="uml:Abstraction" href="Gestion%20de%20courses.uml#_eWDicEeSEeiBj_yDSZJb8Q"/>
@@ -1848,7 +1848,7 @@
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_OLQJ9EehEeibxvYG8VBq4g" type="Abstraction_StereotypeLabel">
       <styles xmi:type="notation:BooleanValueStyle" xmi:id="_k49Q8kehEeibxvYG8VBq4g" name="IS_UPDATED_POSITION" booleanValue="true"/>
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_OLQJ9UehEeibxvYG8VBq4g" y="60"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OLQJ9UehEeibxvYG8VBq4g" x="-228" y="-10"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_OLQJ8EehEeibxvYG8VBq4g"/>
     <element xmi:type="uml:Abstraction" href="Gestion%20de%20courses.uml#_OK0FEEehEeibxvYG8VBq4g"/>
