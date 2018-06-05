@@ -1,0 +1,15 @@
+- Connexion base de donnees uniquement lorsque l'on query la bdd.
+- Gerer recette, self reply ingredient added to list
+- modifier recette et quantite meme use case a changer dans description textuelle
+        -> a changer aussi dans le diagramme de use case.
+- modifier recette, virer loop dans entre modification
+- supprimer recette, le systeme doit afficher la liste des recettes
+
+
+- gerer liste des courses, ajouter a finaliser liste des courses possibilite de mettre
+  des ingredients.
+- afficher liste des recettes
+
+- sauvegarde liste des courses sur bdd
+- modifier liste des courses redondant avec finaliser, a mediter
+- supprimer liste des courses dans BDD
