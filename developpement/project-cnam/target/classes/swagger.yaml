@@ -1,0 +1,730 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "0.0.1_inProgress"
+  title: "API Public"
+  x-logo:
+    url: "/redoc/logo.png"
+    backgroundColor: "#FFFFFF"
+host: "localhost:8080"
+basePath: "/"
+schemes:
+- "http"
+produces:
+- "application/json;charset=utf-8"
+tags:
+- name: "User"
+  description: "This endpoint allows to manage the user resource."
+- name: "Ingredient"
+  description: "This endpoint allows to manage the ingredient resource."
+- name: "Shopping"
+  description: "This endpoint allows to manage the shopping resource."
+- name: "Recipe"
+  description: "This endpoint allows to manage the recipe resource."
+paths:
+  /user:
+    post:
+      tags:
+      - "User"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "userCreate"
+      summary: "create a user"
+      description: "This endpoint allows to create a user."
+      deprecated: false
+      parameters:
+      - name: "User"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        201:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/User"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    get:
+      tags:
+      - "User"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "userFind"
+      summary: "find a user"
+      description: "This endpoint allows to get a list of users."
+      deprecated: false
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/User"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /user/{userId}:
+    get:
+      tags:
+      - "User"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "userGet"
+      summary: "get a user"
+      description: "This endpoint allows to get a user."
+      deprecated: false
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "User identifier."
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/User"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    put:
+      tags:
+      - "User"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "userUpdate"
+      summary: "Update a user."
+      description: "This endpoint allows to update a user."
+      deprecated: false
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "User identifier."
+      - name: "User"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/User"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    patch:
+      tags:
+      - "User"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "userPatch"
+      summary: "Update partially a user"
+      description: "This endpoint allows to partially update a user."
+      deprecated: false
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "User identifier."
+      - name: "User"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/User"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    delete:
+      tags:
+      - "User"
+      operationId: "userDelete"
+      summary: "Delete a user."
+      description: "This endpoint allows to delete a user."
+      deprecated: false
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "User identifier."
+      responses:
+        204:
+          description: "Success"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /ingredient:
+    post:
+      tags:
+      - "Ingredient"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "ingredientCreate"
+      summary: "Create an ingredient"
+      description: "This endpoint allows to create an ingredient."
+      deprecated: false
+      parameters:
+      - name: "Ingredient"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/Ingredient"
+      responses:
+        201:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Ingredient"
+          headers:
+            Location:
+              description: "ingredient/{ingredientId}"
+              type: "string"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    get:
+      tags:
+      - "Ingredient"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "ingredientFind"
+      summary: "Find an ingredient"
+      description: "This endpoint allows to get a list of ingredient."
+      deprecated: false
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Ingredient"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /ingredient/{ingredientId}:
+    get:
+      tags:
+      - "Ingredient"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "ingredientGet"
+      summary: "Get an ingredient."
+      description: "This endpoint allows to get an ingredient."
+      deprecated: false
+      parameters:
+      - name: "ingredientId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "ingredient identifier."
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Ingredient"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    put:
+      tags:
+      - "Ingredient"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "ingredientUpdate"
+      summary: "Update an ingredient."
+      description: "This endpoint allows to update an ingredient."
+      deprecated: false
+      parameters:
+      - name: "ingredientId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "ingredient identifier."
+      - name: "Ingredient"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/Ingredient"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Ingredient"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    patch:
+      tags:
+      - "Ingredient"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "ingredientPatch"
+      summary: "Update partially an ingredient."
+      description: "This endpoint allows to partially update an ingredient."
+      deprecated: false
+      parameters:
+      - name: "ingredientId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "ingredient identifier."
+      - name: "Ingredient"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/Ingredient"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Ingredient"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    delete:
+      tags:
+      - "Ingredient"
+      operationId: "ingredientDelete"
+      summary: "Delete an ingredient."
+      description: "This endpoint allows to delete an ingredient."
+      deprecated: false
+      parameters:
+      - name: "ingredientId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "ingredient identifier."
+      responses:
+        204:
+          description: "Success"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /shopping:
+    get:
+      tags:
+      - "Shopping"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "shoppingFind"
+      summary: "Find a shopping list"
+      description: "This endpoint allows to get a list of shopping list."
+      deprecated: false
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Shopping"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /shopping/{shoppingId}:
+    get:
+      tags:
+      - "Shopping"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "shoppingGet"
+      summary: "Get a shopping list."
+      description: "This endpoint allows to get a shopping list."
+      deprecated: false
+      parameters:
+      - name: "shoppingId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Shopping identifier."
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Shopping"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    delete:
+      tags:
+      - "Shopping"
+      operationId: "shoppingDelete"
+      summary: "Delete a shopping list."
+      description: "This endpoint allows to delete a shopping list."
+      deprecated: false
+      parameters:
+      - name: "shoppingId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Shopping identifier."
+      responses:
+        204:
+          description: "Success"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /recipe:
+    post:
+      tags:
+      - "Recipe"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "recipeCreate"
+      summary: "Create a recipe"
+      description: "This endpoint allows to create a recipe."
+      deprecated: false
+      parameters:
+      - name: "Recipe"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/Recipe"
+      responses:
+        201:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Recipe"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    get:
+      tags:
+      - "Recipe"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "recipeFind"
+      summary: "Find a recipe"
+      description: "This endpoint allows to get a list of recipe."
+      deprecated: false
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Recipe"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /recipe/{recipeId}:
+    get:
+      tags:
+      - "Recipe"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "recipeGet"
+      summary: "Get a recipe."
+      description: "This endpoint allows to get a recipe."
+      deprecated: false
+      parameters:
+      - name: "recipeId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Recipe identifier."
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Recipe"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    put:
+      tags:
+      - "Recipe"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "recipeUpdate"
+      summary: "Update a recipe."
+      description: "This endpoint allows to update a recipe."
+      deprecated: false
+      parameters:
+      - name: "recipeId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Recipe identifier."
+      - name: "Recipe"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/Recipe"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Recipe"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    patch:
+      tags:
+      - "Recipe"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "recipePatch"
+      summary: "Update partially an ingredient."
+      description: "This endpoint allows to partially update an ingredient."
+      deprecated: false
+      parameters:
+      - name: "recipeId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Recipe identifier."
+      - name: "Recipe"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/Recipe"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Recipe"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+    delete:
+      tags:
+      - "Recipe"
+      operationId: "recipeDelete"
+      summary: "Delete a recipe."
+      description: "This endpoint allows to delete a recipe."
+      deprecated: false
+      parameters:
+      - name: "recipeId"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Recipe identifier."
+      responses:
+        204:
+          description: "Success"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+definitions:
+  UnitOfMeasure:
+    description: "This enumeration list any unit of measure for an ingredient."
+    type: "string"
+    enum:
+    - "grams"
+    - "liters"
+    - "piece"
+  Category:
+    description: "This enumeration represents the different categories of an ingredient."
+    type: "string"
+    enum:
+    - "butchery"
+    - "poultry"
+    - "game"
+    - "fish"
+    - "dairy"
+    - "vegetable"
+    - "fresh_frozen"
+    - "grocery"
+    - "cellar"
+  ErrorDetail:
+    description: ""
+    required:
+    - "code"
+    - "message"
+    type: "object"
+    properties:
+      code:
+        description: ""
+        type: "integer"
+        format: "int32"
+      message:
+        description: ""
+        type: "string"
+      description:
+        description: ""
+        type: "string"
+      infoURL:
+        description: ""
+        type: "string"
+  Error:
+    description: ""
+    required:
+    - "code"
+    - "message"
+    type: "object"
+    properties:
+      code:
+        description: ""
+        type: "integer"
+        format: "int32"
+      message:
+        description: ""
+        type: "string"
+      description:
+        description: ""
+        type: "string"
+      infoURL:
+        description: ""
+        type: "string"
+      details:
+        type: "array"
+        items:
+          $ref: "#/definitions/ErrorDetail"
+  Ingredient:
+    description: "This class represents a food ingredient."
+    required:
+    - "idIngredient"
+    - "name"
+    - "unitOfMeasure"
+    - "category"
+    type: "object"
+    properties:
+      idIngredient:
+        description: "Ingredient identifier."
+        type: "string"
+      name:
+        description: "Ingredient name."
+        type: "string"
+      unitOfMeasure:
+        $ref: "#/definitions/UnitOfMeasure"
+      category:
+        $ref: "#/definitions/Category"
+  User:
+    description: "This class represents a user of <nom de l'application>."
+    required:
+    - "idUser"
+    - "name"
+    - "firstname"
+    - "email"
+    type: "object"
+    properties:
+      idUser:
+        description: "User identifier."
+        type: "string"
+      name:
+        description: "User name."
+        type: "string"
+      firstname:
+        description: "User firstname."
+        type: "string"
+      email:
+        description: "User email."
+        type: "string"
+  Shopping:
+    description: "This class represents a shopping list for a user."
+    required:
+    - "idShopping"
+    - "date"
+    - "idUser"
+    type: "object"
+    properties:
+      idShopping:
+        description: "Shopping identifier."
+        type: "string"
+      date:
+        description: "Date the user generated the shopping list."
+        type: "string"
+        format: "date"
+      idUser:
+        description: "User identifier."
+        type: "string"
+  Recipe:
+    description: "This class represents a recipe from a user."
+    required:
+    - "idRecipe"
+    - "name"
+    - "nbPeople"
+    - "idUser"
+    type: "object"
+    properties:
+      idRecipe:
+        description: "Recipient identifier."
+        type: "string"
+      name:
+        description: "Recipient name."
+        type: "string"
+      nbPeople:
+        description: "Number of people expected for the recipe."
+        type: "string"
+      idUser:
+        description: "Identifier of the user who owns the recipe."
+        type: "string"
