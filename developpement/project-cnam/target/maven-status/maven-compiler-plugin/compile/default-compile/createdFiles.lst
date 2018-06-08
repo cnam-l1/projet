@@ -1,0 +1,13 @@
+io/swagger/model/Shopping.class
+io/swagger/api/UserApi.class
+com/cnam/project/projectcnam/ProjectCnamApplication.class
+io/swagger/api/ShoppingApi.class
+io/swagger/model/ErrorDetail.class
+io/swagger/model/Ingredient.class
+io/swagger/model/Category.class
+io/swagger/api/IngredientApi.class
+io/swagger/api/RecipeApi.class
+io/swagger/model/Error.class
+io/swagger/model/User.class
+io/swagger/model/UnitOfMeasure.class
+io/swagger/model/Recipe.class

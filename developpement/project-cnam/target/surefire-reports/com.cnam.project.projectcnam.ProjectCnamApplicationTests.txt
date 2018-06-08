@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.cnam.project.projectcnam.ProjectCnamApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.456 s - in com.cnam.project.projectcnam.ProjectCnamApplicationTests
