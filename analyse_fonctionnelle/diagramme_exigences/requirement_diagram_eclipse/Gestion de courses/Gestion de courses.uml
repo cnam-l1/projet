@@ -54,13 +54,15 @@
       <nestedClassifier xmi:type="uml:Class" xmi:id="_c1kHcEePEeiBj_yDSZJb8Q" name="Licence logiciel"/>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_Df_7cEeREeiBj_yDSZJb8Q" name="Licence des outils de dev"/>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_p8z_0Ee2Eei-84wpzk5l_Q" name="Avoir une BDD"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_g1AhwHAOEeiKEIsgYKuedw" name="Gérer les utilisateurs">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_tnUhMHAPEeiKEIsgYKuedw" name="Mettre à jour utilisateurs"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_LzlrgHAQEeiKEIsgYKuedw" name="Créer les utilisateurs"/>
+      </nestedClassifier>
     </packagedElement>
     <packagedElement xmi:type="uml:Abstraction" xmi:id="_K0JrQEehEeibxvYG8VBq4g" name="" client="_720JQEegEeibxvYG8VBq4g" supplier="_MVOB8EeMEeiBj_yDSZJb8Q"/>
-    <packagedElement xmi:type="uml:Abstraction" xmi:id="_OK0FEEehEeibxvYG8VBq4g" name="" client="_ijgR8EegEeibxvYG8VBq4g" supplier="_MVOB8EeMEeiBj_yDSZJb8Q"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_ywFpwEeqEeibxvYG8VBq4g" name="Sauvegarder la recette en BDD"/>
-    <packagedElement xmi:type="uml:Abstraction" xmi:id="_DMH-YEerEeibxvYG8VBq4g" name="" client="_ywFpwEeqEeibxvYG8VBq4g" supplier="_Q9m3cEeOEeiBj_yDSZJb8Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_OK0FEEehEeibxvYG8VBq4g" name="" client="_720JQEegEeibxvYG8VBq4g" supplier="_MVOB8EeMEeiBj_yDSZJb8Q"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_e0Du0FHfEei-84wpzk5l_Q" name="Choix par defaut : Si pas de choix global ou par recette effectué, par défaut les quantités seront celles enregistrées dans la recette."/>
-    <packagedElement xmi:type="uml:Abstraction" xmi:id="_A79BMFHgEei-84wpzk5l_Q" client="_ijgR8EegEeibxvYG8VBq4g" supplier="_e0Du0FHfEei-84wpzk5l_Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_A79BMFHgEei-84wpzk5l_Q" client="_ijgR8EegEeibxvYG8VBq4g" supplier="_HNjywEcXEeiBj_yDSZJb8Q"/>
     <packagedElement xmi:type="uml:Abstraction" xmi:id="_CMfcAFHgEei-84wpzk5l_Q" client="_HNjywEcXEeiBj_yDSZJb8Q" supplier="_HNjywEcXEeiBj_yDSZJb8Q"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HdEOYEcXEeiBj_yDSZJb8Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HdK8EEcXEeiBj_yDSZJb8Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -125,33 +127,34 @@
   </uml:Model>
   <Requirements:Requirement xmi:id="_ohtUAEcXEeiBj_yDSZJb8Q" base_Class="_oXJCwEcXEeiBj_yDSZJb8Q" id="1" text="Gérer l'achat de denrées alimentaires"/>
   <Requirements:Requirement xmi:id="_evmrUEcYEeiBj_yDSZJb8Q" base_Class="_evcTQEcYEeiBj_yDSZJb8Q" id="1.1" text="API suivant les recommandations REST pour faciliter l'utilisation du web service"/>
-  <Requirements:Requirement xmi:id="_qM1uMEcZEeiBj_yDSZJb8Q" base_Class="_qMqvEEcZEeiBj_yDSZJb8Q" id="1.2" text="Permettre de créer une recette"/>
-  <Requirements:Requirement xmi:id="_jP58AEc_EeiBj_yDSZJb8Q" base_Class="_jPz1YEc_EeiBj_yDSZJb8Q" id="1.3" text="Permettre de générer une liste de commissions a partir d'une liste de recettes"/>
-  <Requirements:Requirement xmi:id="_MVS6cEeMEeiBj_yDSZJb8Q" base_Class="_MVOB8EeMEeiBj_yDSZJb8Q" id="1.3.1" text="Permettre de definir la quantité de chaques ingredients en fonction du nombre de personnes"/>
-  <Requirements:Requirement xmi:id="_896rUEeMEeiBj_yDSZJb8Q" base_Class="_89f0kEeMEeiBj_yDSZJb8Q" id="1.3.3" text="Permettre de générer une liste d'ingredients en fonction des options enregistrées"/>
-  <Requirements:Requirement xmi:id="_MdQHIEeNEeiBj_yDSZJb8Q" base_Class="_MdDS0EeNEeiBj_yDSZJb8Q" id="1.3.2" text="Permettre d'adapter la liste de commissions et leurs quantités en fonction du besoin"/>
-  <Requirements:Requirement xmi:id="_Q9rv8EeOEeiBj_yDSZJb8Q" base_Class="_Q9m3cEeOEeiBj_yDSZJb8Q" id="1.2.1" text="Permettre de lister les ingredients et leurs quantites pour n personnes"/>
-  <Requirements:Requirement xmi:id="_W7nuAEeOEeiBj_yDSZJb8Q" base_Class="_W7i1gEeOEeiBj_yDSZJb8Q" id="1.2.2" text="Permettre de modifier une recette"/>
-  <Requirements:Requirement xmi:id="_cy5DYEeOEeiBj_yDSZJb8Q" base_Class="_cy0K4EeOEeiBj_yDSZJb8Q" id="1.2.3" text="Permettre de supprimer une recette"/>
-  <Requirements:Requirement xmi:id="_c1o_8EePEeiBj_yDSZJb8Q" base_Class="_c1kHcEePEeiBj_yDSZJb8Q" id="1.4" text="S'assurer d'une licence logiciel conforme au reglement du CNAM"/>
-  <Requirements:Requirement xmi:id="_DgEz8EeREeiBj_yDSZJb8Q" base_Class="_Df_7cEeREeiBj_yDSZJb8Q" id="1.5" text="Utiliser uniquement des outils open-source"/>
-  <Requirements:Requirement xmi:id="_faE1IEebEeibxvYG8VBq4g" base_Class="_fWsxAEebEeibxvYG8VBq4g" id="1.3.4.1" text="Pouvoir supprimer un ingrédient dont on a pas besoin"/>
-  <Requirements:Requirement xmi:id="__TOYAEebEeibxvYG8VBq4g" base_Class="__TEnAEebEeibxvYG8VBq4g" id="1.3.4.3" text="Permet à la quantité d'être modifiée"/>
-  <Requirements:Requirement xmi:id="_KQ-fAEecEeibxvYG8VBq4g" base_Class="_KQ4_cEecEeibxvYG8VBq4g" id="1.3.4.2" text="Ajouter un ingrédient independamment des recettes"/>
-  <Requirements:Requirement xmi:id="_ijmYkEegEeibxvYG8VBq4g" base_Class="_ijgR8EegEeibxvYG8VBq4g" id="1.3.2.1" text="Choisir un même nombre de personne pour toutes les recettes"/>
-  <Requirements:Requirement xmi:id="_726P4EegEeibxvYG8VBq4g" base_Class="_720JQEegEeibxvYG8VBq4g" id="1.3.2.2" text="Choisir le nombre de personne indépendamment pour chaque recette"/>
+  <Requirements:Requirement xmi:id="_qM1uMEcZEeiBj_yDSZJb8Q" base_Class="_qMqvEEcZEeiBj_yDSZJb8Q" id="1.4" text="Permettre de créer une recette"/>
+  <Requirements:Requirement xmi:id="_jP58AEc_EeiBj_yDSZJb8Q" base_Class="_jPz1YEc_EeiBj_yDSZJb8Q" id="1.5" text="Permettre de générer une liste de commissions a partir d'une liste de recettes"/>
+  <Requirements:Requirement xmi:id="_MVS6cEeMEeiBj_yDSZJb8Q" base_Class="_MVOB8EeMEeiBj_yDSZJb8Q" id="1.5.1" text="Permettre de definir la quantité de chaques ingredients en fonction du nombre de personnes"/>
+  <Requirements:Requirement xmi:id="_896rUEeMEeiBj_yDSZJb8Q" base_Class="_89f0kEeMEeiBj_yDSZJb8Q" id="1.5.3" text="Permettre de générer une liste d'ingredients en fonction des options enregistrées"/>
+  <Requirements:Requirement xmi:id="_MdQHIEeNEeiBj_yDSZJb8Q" base_Class="_MdDS0EeNEeiBj_yDSZJb8Q" id="1.5.2" text="Permettre d'adapter la liste de commissions et leurs quantités en fonction du besoin"/>
+  <Requirements:Requirement xmi:id="_Q9rv8EeOEeiBj_yDSZJb8Q" base_Class="_Q9m3cEeOEeiBj_yDSZJb8Q" id="1.4.1" text="Permettre de lister les ingredients et leurs quantites pour n personnes"/>
+  <Requirements:Requirement xmi:id="_W7nuAEeOEeiBj_yDSZJb8Q" base_Class="_W7i1gEeOEeiBj_yDSZJb8Q" id="1.4.2" text="Permettre de modifier une recette"/>
+  <Requirements:Requirement xmi:id="_cy5DYEeOEeiBj_yDSZJb8Q" base_Class="_cy0K4EeOEeiBj_yDSZJb8Q" id="1.4.3" text="Permettre de supprimer une recette"/>
+  <Requirements:Requirement xmi:id="_c1o_8EePEeiBj_yDSZJb8Q" base_Class="_c1kHcEePEeiBj_yDSZJb8Q" id="1.2" text="S'assurer d'une licence logiciel conforme au reglement du CNAM"/>
+  <Requirements:Requirement xmi:id="_DgEz8EeREeiBj_yDSZJb8Q" base_Class="_Df_7cEeREeiBj_yDSZJb8Q" id="1.3" text="Utiliser uniquement des outils open-source"/>
+  <Requirements:Requirement xmi:id="_faE1IEebEeibxvYG8VBq4g" base_Class="_fWsxAEebEeibxvYG8VBq4g" id="1.5.4.1" text="Pouvoir supprimer un ingrédient dont on a pas besoin"/>
+  <Requirements:Requirement xmi:id="__TOYAEebEeibxvYG8VBq4g" base_Class="__TEnAEebEeibxvYG8VBq4g" id="1.5.4.3" text="Permet à la quantité d'être modifiée"/>
+  <Requirements:Requirement xmi:id="_KQ-fAEecEeibxvYG8VBq4g" base_Class="_KQ4_cEecEeibxvYG8VBq4g" id="1.5.4.2" text="Ajouter un ingrédient independamment des recettes"/>
+  <Requirements:Requirement xmi:id="_ijmYkEegEeibxvYG8VBq4g" base_Class="_ijgR8EegEeibxvYG8VBq4g" id="1.5.2.1" text="Choisir un même nombre de personne pour toutes les recettes"/>
+  <Requirements:Requirement xmi:id="_726P4EegEeibxvYG8VBq4g" base_Class="_720JQEegEeibxvYG8VBq4g" id="1.5.2.2" text="Choisir le nombre de personne indépendamment pour chaque recette"/>
   <Requirements:DeriveReqt xmi:id="_K0V4gEehEeibxvYG8VBq4g" base_DirectedRelationship="_K0JrQEehEeibxvYG8VBq4g" base_Abstraction="_K0JrQEehEeibxvYG8VBq4g"/>
   <Requirements:DeriveReqt xmi:id="_OK-dIEehEeibxvYG8VBq4g" base_DirectedRelationship="_OK0FEEehEeibxvYG8VBq4g" base_Abstraction="_OK0FEEehEeibxvYG8VBq4g"/>
-  <Requirements:Requirement xmi:id="__MpjAEeoEeibxvYG8VBq4g" base_Class="__Mej4EeoEeibxvYG8VBq4g" id="1.2.1.1" text="Lister les ingrédients nécessaires à la recette ainsi que leur quantité"/>
-  <Requirements:Requirement xmi:id="_McGm4EepEeibxvYG8VBq4g" base_Class="_McBuYEepEeibxvYG8VBq4g" id="1.2.1.2" text="Sélectionner le nombre de personne pour laquelle la quantité d'ingrédient a été renseigné."/>
-  <Requirements:Requirement xmi:id="_-r4i0EepEeibxvYG8VBq4g" base_Class="_-rzqUEepEeibxvYG8VBq4g" id="1.2.2.1" text="Permet d'ajouter ou supprimer des ingrédients"/>
-  <Requirements:Requirement xmi:id="_GIMjYEeqEeibxvYG8VBq4g" base_Class="_GIHD0EeqEeibxvYG8VBq4g" id="1.2.2.2" text="Permet de modifier la quantité de chaque ingrédient"/>
-  <Blocks:Block xmi:id="_0509cEeqEeibxvYG8VBq4g" base_Class="_ywFpwEeqEeibxvYG8VBq4g"/>
-  <Requirements:Satisfy xmi:id="_DMd8oEerEeibxvYG8VBq4g" base_DirectedRelationship="_DMH-YEerEeibxvYG8VBq4g" base_Abstraction="_DMH-YEerEeibxvYG8VBq4g"/>
-  <Requirements:Requirement xmi:id="_p9G6wEe2Eei-84wpzk5l_Q" base_Class="_p8z_0Ee2Eei-84wpzk5l_Q" id="1.9" text="Base de donnée en ligne"/>
+  <Requirements:Requirement xmi:id="__MpjAEeoEeibxvYG8VBq4g" base_Class="__Mej4EeoEeibxvYG8VBq4g" id="1.4.1.1" text="Lister les ingrédients nécessaires à la recette ainsi que leur quantité"/>
+  <Requirements:Requirement xmi:id="_McGm4EepEeibxvYG8VBq4g" base_Class="_McBuYEepEeibxvYG8VBq4g" id="1.4.1.2" text="Sélectionner le nombre de personne pour laquelle la quantité d'ingrédient a été renseigné."/>
+  <Requirements:Requirement xmi:id="_-r4i0EepEeibxvYG8VBq4g" base_Class="_-rzqUEepEeibxvYG8VBq4g" id="1.4.2.1" text="Permet d'ajouter ou supprimer des ingrédients"/>
+  <Requirements:Requirement xmi:id="_GIMjYEeqEeibxvYG8VBq4g" base_Class="_GIHD0EeqEeibxvYG8VBq4g" id="1.4.2.2" text="Permet de modifier la quantité de chaque ingrédient"/>
+  <Requirements:Requirement xmi:id="_p9G6wEe2Eei-84wpzk5l_Q" base_Class="_p8z_0Ee2Eei-84wpzk5l_Q" id="1.7" text="Base de donnée en ligne"/>
   <ModelElements:Rationale xmi:id="_GDR7QEe3Eei-84wpzk5l_Q" base_Comment="_GC6u4Ee3Eei-84wpzk5l_Q"/>
-  <Requirements:Requirement xmi:id="_W6BNQFHbEei-84wpzk5l_Q" base_Class="_W54qYFHbEei-84wpzk5l_Q" id="1.2.4" text="Permettre de lister les recettes"/>
+  <Requirements:Requirement xmi:id="_W6BNQFHbEei-84wpzk5l_Q" base_Class="_W54qYFHbEei-84wpzk5l_Q" id="1.4.4" text="Permettre de lister les recettes"/>
   <Requirements:Refine xmi:id="_A8FkEFHgEei-84wpzk5l_Q" base_DirectedRelationship="_A79BMFHgEei-84wpzk5l_Q" base_Abstraction="_A79BMFHgEei-84wpzk5l_Q"/>
   <Requirements:Refine xmi:id="_CMlioFHgEei-84wpzk5l_Q" base_DirectedRelationship="_CMfcAFHgEei-84wpzk5l_Q" base_Abstraction="_CMfcAFHgEei-84wpzk5l_Q"/>
   <Blocks:Block xmi:id="_T5BD8FHnEei-84wpzk5l_Q" base_Class="_e0Du0FHfEei-84wpzk5l_Q"/>
+  <Requirements:Requirement xmi:id="_g4hIwHAOEeiKEIsgYKuedw" base_Class="_g1AhwHAOEeiKEIsgYKuedw" id="1.6" text="Permettre la gestion des utilisateurs"/>
+  <Requirements:Requirement xmi:id="_tnkY0HAPEeiKEIsgYKuedw" base_Class="_tnUhMHAPEeiKEIsgYKuedw" id="1.6.2" text="Permettre de faire la mise à jour de l'utilisateur"/>
+  <Requirements:Requirement xmi:id="_LzryIHAQEeiKEIsgYKuedw" base_Class="_LzlrgHAQEeiKEIsgYKuedw" id="1.6.1" text="Permettre de créer un utilisateur"/>
 </xmi:XMI>
