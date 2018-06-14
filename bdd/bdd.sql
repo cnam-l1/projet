@@ -9,11 +9,9 @@
 
 CREATE TABLE User(
         id_user   Int  Auto_increment  NOT NULL ,
-        lastname  Varchar (50) NOT NULL ,
-        firstname Varchar (50) NOT NULL ,
+        login     Varchar (50) NOT NULL ,
         password  Varchar (50) NOT NULL ,
-        email     Varchar (100) NOT NULL
-	,CONSTRAINT User_PK PRIMARY KEY (id_user)
+        ,CONSTRAINT User_PK PRIMARY KEY (id_user)
 )ENGINE=InnoDB;
 
 
@@ -23,6 +21,7 @@ CREATE TABLE User(
 
 CREATE TABLE Recipe(
         id_recipe Int  Auto_increment  NOT NULL ,
+        id_hash_recipe Varchar (100) NOT NULL ,
         name      Varchar (100) NOT NULL ,
         nb_person Int NOT NULL ,
         id_user   Int NOT NULL
@@ -38,6 +37,7 @@ CREATE TABLE Recipe(
 
 CREATE TABLE Shopping(
         id_shopping Int  Auto_increment  NOT NULL ,
+        id_hash_shopping Varchar(100) NOT NULL ,
         date        Date NOT NULL ,
         id_user     Int NOT NULL
 	,CONSTRAINT Shopping_PK PRIMARY KEY (id_shopping)
@@ -74,6 +74,7 @@ CREATE TABLE Category(
 
 CREATE TABLE Ingredient(
         id_ingredient  Int  Auto_increment  NOT NULL ,
+        id_hash_ingredient Varchar(100) NOT NULL ,
         name           Varchar (100) NOT NULL ,
         id_mesure_unit Int NOT NULL ,
         id_category    Int NOT NULL
