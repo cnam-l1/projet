@@ -9,6 +9,7 @@
 
 CREATE TABLE User(
         id_user   Int  Auto_increment  NOT NULL ,
+        id_hash_user Varchar(100) NOT NULL ,
         login     Varchar (50) NOT NULL ,
         password  Varchar (50) NOT NULL ,
         ,CONSTRAINT User_PK PRIMARY KEY (id_user)
