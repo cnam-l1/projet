@@ -21,22 +21,6 @@ public class UserController implements UserApi{
     @Autowired
     UserService userService;
 
-    @RequestMapping(method = GET, value = "{userId}")
-    public ResponseEntity<User> getUser(@PathVariable("userId") String id ){
-
-        User user = userService.getUser(id);
-
-        return new ResponseEntity<User>(user, HttpStatus.OK);
-    }
-
-    @Override
-    @RequestMapping(method = GET)
-    public ResponseEntity<List<User>> userFind(){
-
-        List<User> user = userService.getUserList();
-
-        return new ResponseEntity<>(user, HttpStatus.OK);
-    }
 
 
 }

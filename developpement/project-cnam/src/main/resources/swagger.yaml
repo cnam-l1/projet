@@ -672,29 +672,25 @@ definitions:
     description: "This class represents a user of <nom de l'application>."
     required:
     - "idUser"
-    - "name"
-    - "firstname"
-    - "email"
+    - "login"
+    - "password"
     type: "object"
     properties:
       idUser:
         description: "User identifier."
         type: "string"
-      name:
+      login:
         description: "User name."
         type: "string"
-      firstname:
+      password:
         description: "User firstname."
-        type: "string"
-      email:
-        description: "User email."
         type: "string"
   Shopping:
     description: "This class represents a shopping list for a user."
     required:
     - "idShopping"
     - "date"
-    - "idUser"
+    - "ingredientList"
     type: "object"
     properties:
       idShopping:
@@ -704,16 +700,17 @@ definitions:
         description: "Date the user generated the shopping list."
         type: "string"
         format: "date"
-      idUser:
-        description: "User identifier."
-        type: "string"
+      ingredientList:
+        type: "array"
+        items:
+          $ref: "#/definitions/Ingredient"
   Recipe:
     description: "This class represents a recipe from a user."
     required:
     - "idRecipe"
     - "name"
     - "nbPeople"
-    - "idUser"
+    - "ingredientList"
     type: "object"
     properties:
       idRecipe:
@@ -725,6 +722,7 @@ definitions:
       nbPeople:
         description: "Number of people expected for the recipe."
         type: "string"
-      idUser:
-        description: "Identifier of the user who owns the recipe."
-        type: "string"
+      ingredientList:
+        type: "array"
+        items:
+          $ref: "#/definitions/Ingredient"
