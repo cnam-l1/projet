@@ -1,7 +1,6 @@
 package com.cnam.project.projectcnam.dao.repository;
 
-import com.cnam.project.projectcnam.dao.model.UserDao;
-import io.swagger.model.User;
+import com.cnam.project.projectcnam.dao.model.IngredientDao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,9 +11,5 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface UserRepository extends JpaRepository<UserDao, Long> {
-
-    public UserDao findByLogin(String login);
-
-    public UserDao findByIdHashUser(String idHashUser);
+public interface IngredientRepository extends JpaRepository<IngredientDao, Long> {
 }

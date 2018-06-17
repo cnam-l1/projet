@@ -6,62 +6,72 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
+
 @Entity
 @Table(name="user")
 @EntityListeners(AuditingEntityListener.class)
 public class UserDao implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="id_user")
+    private Long idUser;
 
     @NotBlank
-    private String name;
+    @Column(name="id_hash_user")
+    private String idHashUser;
 
-    private String firstname;
+    @NotBlank
+    private String login;
 
-    private String email;
+    @NotBlank
+    private String password;
 
 
     public UserDao() {
     }
 
-    public UserDao(Long id, @NotBlank String name, String firstname, String email) {
-        this.id = id;
-        this.name = name;
-        this.firstname = firstname;
-        this.email = email;
+    public UserDao(Long idUser, @NotBlank String idHashUser, @NotBlank String login, @NotBlank String password) {
+        this.idUser = idUser;
+        this.idHashUser = idHashUser;
+        this.login = login;
+        this.password = password;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 
-    public String getName() {
-        return this.name;
+    public String getIdHashUser() {
+        return idHashUser;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIdHashUser(String idHashUser) {
+        this.idHashUser = idHashUser;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getLogin() {
+        return login;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPassword() {
+        return password;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
