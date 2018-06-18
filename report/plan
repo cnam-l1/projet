@@ -1,0 +1,25 @@
+CONTEXT
+        - probleme
+
+METHODE
+        - role
+        - organisation (scrum, agile)
+        - outils
+
+ANALYSE
+        - fonctionnelle (diagramme de cas, sequence, diagramme de domaine)
+        - planning PERT
+
+ARCHITECTURE
+        - composant et deploiment
+        - choix technique et deploiment
+
+        Conception detaille par composant
+                - diagramme de classe de conception (methode et classe), API,
+                framework
+                - algorithmique
+
+DEMONSTRATION
+        - scenario metier
+
+BILAN
