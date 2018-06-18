@@ -14,6 +14,7 @@ developpement/project-cnam/.idea
 developpement/project-cnam/*.iws
 developpement/project-cnam/*.iml
 developpement/project-cnam/*.ipr
+developpement/project-cnam/target/
 
 ### NetBeans ###
 /nbproject/private/
