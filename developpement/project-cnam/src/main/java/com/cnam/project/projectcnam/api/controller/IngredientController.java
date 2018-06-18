@@ -1,24 +1,23 @@
 package com.cnam.project.projectcnam.api.controller;
 
-import com.cnam.project.projectcnam.dao.model.IngredientDao;
-import com.cnam.project.projectcnam.dao.model.UserDao;
-import com.cnam.project.projectcnam.service.AuthService;
+import com.cnam.project.projectcnam.service.AuthorizationService;
 import com.cnam.project.projectcnam.service.IngredientService;
-import com.cnam.project.projectcnam.service.UserService;
 import com.cnam.project.projectcnam.service.model.Credentials;
-import io.swagger.annotations.ApiParam;
 import io.swagger.api.IngredientApi;
 import io.swagger.model.Ingredient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponents;
-import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.List;
+
+import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * Developed by Hugo Seban
@@ -29,38 +28,32 @@ import java.util.List;
 @RestController
 public class IngredientController implements IngredientApi {
 
+    Logger logger = LoggerFactory.getLogger(IngredientController.class);
+
     @Autowired
     IngredientService ingredientService;
 
     @Autowired
-    UserService userService;
-
-    @Autowired
-    AuthService auth;
+    AuthorizationService auth;
 
     public ResponseEntity<Ingredient> ingredientCreate(@Valid @RequestBody Ingredient ingredient) {
 
-//        Credentials credentials = auth.getAndValidCredentials();
-//
-//        UserDao userDao = userService.getUser(credentials);
-//
-//        String idIngredient = ingredientService.ingredientCreate(credentials, userDao, ingredient);
-//
-//        UriComponents uriComponents = UriComponentsBuilder.newInstance()
-//                .path("/customers/{id}").buildAndExpand(idIngredient);
-//
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setLocation(uriComponents.toUri());
-//
-//        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+        logger.debug("[IngredientController] [ingredientCreate] is called. ingredient.name", ingredient.getName());
 
-        return null;
+        Credentials credentials = auth.getAndValidCredentials();
+
+        Ingredient newIngredient = ingredientService.ingredientCreate(ingredient);
+
+        logger.debug("[IngredientController] [ingredientCreate] is created. newIngredient.id", newIngredient.getIdIngredient());
+
+        return new ResponseEntity<>(newIngredient, HttpStatus.CREATED);
+
     }
 
     @Override
     public ResponseEntity<List<Ingredient>> ingredientFind() {
 
-//        Credentials credentials = auth.getAndValidCredentials();
+//        Credentials credentials = authorizationService.getAndValidCredentials();
 //
 //        UserDao userDao = userService.getUser(credentials);
 //

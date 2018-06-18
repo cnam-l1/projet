@@ -76,4 +76,16 @@ public class HandlerController {
 
         return new ResponseEntity<Error>(error, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(InternalServerError.class)
+    public ResponseEntity<Error> internalServerExceptionResponse(InternalServerError ise) {
+
+        Error error = new Error();
+        error.setMessage(ise.getMessage());
+        error.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+
+        return new ResponseEntity<Error>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+
 }

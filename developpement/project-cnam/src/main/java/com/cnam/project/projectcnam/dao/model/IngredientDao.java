@@ -31,17 +31,17 @@ public class IngredientDao implements Serializable {
 
     @NotBlank
     @Column(name = "id_mesure_unit")
-    private int idMesureUnit;
+    private Integer idMesureUnit;
 
     @NotBlank
     @Column(name = "id_category")
-    private int idCategory;
+    private Integer idCategory;
 
 
     public IngredientDao() {
     }
 
-    public IngredientDao(Long idIngredient, @NotBlank String idHash, @NotBlank String name, @NotBlank int idMesureUnit, @NotBlank int idCategory) {
+    public IngredientDao(Long idIngredient, @NotBlank String idHash, @NotBlank String name, @NotBlank Integer idMesureUnit, @NotBlank Integer idCategory) {
         this.idIngredient = idIngredient;
         this.idHash = idHash;
         this.name = name;
@@ -65,19 +65,19 @@ public class IngredientDao implements Serializable {
         this.idHash = idHash;
     }
 
-    public int getIdMesureUnit() {
+    public Integer getIdMesureUnit() {
         return idMesureUnit;
     }
 
-    public void setIdMesureUnit(int idMesureUnit) {
+    public void setIdMesureUnit(Integer idMesureUnit) {
         this.idMesureUnit = idMesureUnit;
     }
 
-    public int getIdCategory() {
+    public Integer getIdCategory() {
         return idCategory;
     }
 
-    public void setIdCategory(int idCategory) {
+    public void setIdCategory(Integer idCategory) {
         this.idCategory = idCategory;
     }
 
