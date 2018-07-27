@@ -1,8 +1,8 @@
 package com.cnam.project.projectcnam.api.controller;
 
-import com.cnam.project.projectcnam.service.AuthorizationService;
+import com.cnam.project.projectcnam.security.model.Credentials;
+import com.cnam.project.projectcnam.security.requestValidator.RequestValidator;
 import com.cnam.project.projectcnam.service.IngredientService;
-import com.cnam.project.projectcnam.service.model.Credentials;
 import io.swagger.api.IngredientApi;
 import io.swagger.model.Ingredient;
 import org.slf4j.Logger;
@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.List;
-
-import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * Developed by Hugo Seban
@@ -34,57 +32,89 @@ public class IngredientController implements IngredientApi {
     IngredientService ingredientService;
 
     @Autowired
-    AuthorizationService auth;
+    RequestValidator requestValidator;
 
+    @Override
     public ResponseEntity<Ingredient> ingredientCreate(@Valid @RequestBody Ingredient ingredient) {
 
         logger.debug("[IngredientController] [ingredientCreate] is called. ingredient.name", ingredient.getName());
 
-        Credentials credentials = auth.getAndValidCredentials();
+        requestValidator.validateRequest();
 
-        Ingredient newIngredient = ingredientService.ingredientCreate(ingredient);
+        Ingredient newIngredient = ingredientService.ingredientCreate(requestValidator.getCredentials(), ingredient);
 
         logger.debug("[IngredientController] [ingredientCreate] is created. newIngredient.id", newIngredient.getIdIngredient());
 
         return new ResponseEntity<>(newIngredient, HttpStatus.CREATED);
-
     }
 
     @Override
     public ResponseEntity<List<Ingredient>> ingredientFind() {
 
-//        Credentials credentials = authorizationService.getAndValidCredentials();
-//
-//        UserDao userDao = userService.getUser(credentials);
-//
-//        List<IngredientDao> ingredientList = ingredientService.ingredientFind(credentials);
-//
-//        return new ResponseEntity<>(ingredientList, HttpStatus.CREATED);
+        logger.debug("[IngredientController] [ingredientFind] is called.");
 
-        return null;
-    }
+        requestValidator.validateRequest();
 
-    @Override
-    public ResponseEntity<Void> ingredientDelete(@PathVariable("ingredientId") String ingredientId) {
+        Credentials credentials = requestValidator.getCredentials();
 
-        return null;
+        List<Ingredient> ingredientList = ingredientService.ingredientFind(credentials);
+
+        logger.debug("[IngredientController] [ingredientFind] ingredientList.size : {}", ingredientList.size());
+
+        return new ResponseEntity<>(ingredientList, HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<Ingredient> ingredientGet(@PathVariable("ingredientId") String ingredientId) {
 
-        return null;
+        logger.debug("[IngredientController] [ingredientCreate] is called. ingredientId : {}", ingredientId);
+
+        requestValidator.validateRequest();
+
+        Credentials credentials = requestValidator.getCredentials();
+
+        Ingredient ingredient = ingredientService.ingredientGet(credentials, ingredientId);
+
+        logger.debug("[IngredientController] [ingredientCreate] ingredient.id : {}", ingredient.getIdIngredient());
+
+        return new ResponseEntity<Ingredient>(ingredient, HttpStatus.OK);
     }
 
     @Override
-    public ResponseEntity<Ingredient> ingredientPatch(@PathVariable("ingredientId") String ingredientId, @Valid @RequestBody Ingredient ingredient) {
+    public ResponseEntity<Void> ingredientDelete(@PathVariable("ingredientId") String ingredientId) {
 
-        return null;
+        logger.debug("[IngredientController] [ingredientDelete] is called. ingredientId : {} ", ingredientId);
+
+        requestValidator.validateRequest();
+
+        ingredientService.ingredientDelete(requestValidator.getCredentials(), ingredientId);
+
+        logger.debug("[IngredientController] [ingredientDelete] ingredientId : {} is deleted", ingredientId);
+
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<Ingredient> ingredientUpdate(@PathVariable("ingredientId") String ingredientId, @Valid @RequestBody Ingredient ingredient) {
 
-        return null;
+        logger.debug("[IngredientController] [ingredientUpdate] is called. ingredientId : {}", ingredientId);
+
+        requestValidator.validateRequest();
+
+        Ingredient ingredientUpdated = ingredientService.ingredientUpdate(ingredientId, ingredient);
+
+        return new ResponseEntity<Ingredient>(ingredientUpdated, HttpStatus.NO_CONTENT);
+    }
+
+    @Override
+    public ResponseEntity<Ingredient> ingredientPatch(@PathVariable("ingredientId") String ingredientId, @Valid @RequestBody Ingredient ingredient) {
+
+        logger.debug("[IngredientController] [ingredientPatch] is called. ingredientId : {}", ingredientId);
+
+        requestValidator.validateRequest();
+
+        Ingredient ingredientPatched = ingredientService.ingredientPatch(ingredientId, ingredient);
+
+        return new ResponseEntity<Ingredient>(ingredientPatched, HttpStatus.NOT_IMPLEMENTED);
     }
 }
