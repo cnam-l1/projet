@@ -1,11 +1,11 @@
 package com.cnam.project.projectcnam.service;
 
-import com.cnam.project.projectcnam.dao.model.CategoryDao;
-import com.cnam.project.projectcnam.dao.repository.CategoryRepository;
-import com.cnam.project.projectcnam.exception.model.BadRequestException;
-import com.cnam.project.projectcnam.exception.model.InternalServerError;
-import com.cnam.project.projectcnam.exception.model.NotFoundException;
+import com.cnam.project.projectcnam.api.exception.NotFoundException;
+import com.cnam.project.projectcnam.bdd.DTO.CategoryDTO;
+import com.cnam.project.projectcnam.bdd.repository.CategoryRepository;
 import io.swagger.model.Category;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,18 +20,24 @@ import java.util.List;
 @Service
 public class CategoryService {
 
+    private Logger logger = LoggerFactory.getLogger(CategoryService.class);
+
     @Autowired
     CategoryRepository categoryRepository;
 
     public Integer getIdCategoryByName(Category category) {
 
-        List<CategoryDao> categoryDaoList = categoryRepository.findAll();
+        logger.debug("[getIdCategoryByName] is called. category : {}", category.toString());
 
-        for (CategoryDao categoryDao : categoryDaoList) {
+        List<CategoryDTO> categoryDTOList = categoryRepository.findAll();
 
-            if (categoryDao.getName().equals(category.name())) {
+        for (CategoryDTO categoryDTO : categoryDTOList) {
 
-                return categoryDao.getIdCategory().intValue();
+            if (categoryDTO.getName().equals(category.toString())) {
+
+                logger.debug("[getIdCategoryByName] category is find. category : {}", categoryDTO.getName());
+
+                return categoryDTO.getIdCategory().intValue();
             }
         }
 
@@ -40,16 +46,20 @@ public class CategoryService {
 
     public String getCategoryNameById(Integer idCategory) {
 
-        List<CategoryDao> categoryDaoList = categoryRepository.findAll();
+        logger.debug("[getCategoryNameById] is called. idCategory : {}", idCategory);
 
-        for (CategoryDao categoryDao : categoryDaoList) {
+        List<CategoryDTO> categoryDTOList = categoryRepository.findAll();
 
-            if (categoryDao.getIdCategory().equals(idCategory)) {
+        for (CategoryDTO categoryDTO : categoryDTOList) {
 
-                return categoryDao.getName();
+            if (categoryDTO.getIdCategory().intValue() == idCategory) {
+
+                logger.debug("[getCategoryNameById] is find. idCategory : {}", idCategory);
+
+                return categoryDTO.getName();
             }
         }
 
-        throw new InternalServerError("An error occured.");
+        throw new NotFoundException("Category is not found.");
     }
 }
