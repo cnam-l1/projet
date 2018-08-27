@@ -11,6 +11,12 @@ import org.springframework.stereotype.Service;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
+
 @Service
 public class UserDAO {
 

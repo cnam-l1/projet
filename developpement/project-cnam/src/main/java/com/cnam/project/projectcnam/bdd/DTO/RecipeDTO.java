@@ -5,6 +5,13 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.List;
+
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
 
 @Entity
 @Table(name = "recipe")
@@ -20,18 +27,24 @@ public class RecipeDTO implements Serializable {
     @Column(name = "id_hash_recipe")
     private String idHashRecipe;
 
+    @OneToMany(mappedBy = "pk.recipe",
+            cascade = CascadeType.ALL)
+    private List<IngredientRecipeDTO> ingredientRecipeDTOList;
+
     @NotBlank
     private String name;
 
-    @NotBlank
     private Integer nbPerson;
 
-    @NotBlank
     private Integer idUser;
 
-    public RecipeDTO(Long idRecipe, @NotBlank String idHashRecipe, @NotBlank String name, @NotBlank Integer nbPerson, @NotBlank Integer idUser) {
+    public RecipeDTO() {
+    }
+
+    public RecipeDTO(Long idRecipe, @NotBlank String idHashRecipe, List<IngredientRecipeDTO> ingredientRecipeDTOList, @NotBlank String name, Integer nbPerson, Integer idUser) {
         this.idRecipe = idRecipe;
         this.idHashRecipe = idHashRecipe;
+        this.ingredientRecipeDTOList = ingredientRecipeDTOList;
         this.name = name;
         this.nbPerson = nbPerson;
         this.idUser = idUser;
@@ -39,6 +52,14 @@ public class RecipeDTO implements Serializable {
 
     public Long getIdRecipe() {
         return idRecipe;
+    }
+
+    public List<IngredientRecipeDTO> getIngredientRecipeDTOList() {
+        return ingredientRecipeDTOList;
+    }
+
+    public void setIngredientRecipeDTOList(List<IngredientRecipeDTO> ingredientRecipeDTOList) {
+        this.ingredientRecipeDTOList = ingredientRecipeDTOList;
     }
 
     public void setIdRecipe(Long idRecipe) {
@@ -75,5 +96,20 @@ public class RecipeDTO implements Serializable {
 
     public void setIdUser(Integer idUser) {
         this.idUser = idUser;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

@@ -10,6 +10,12 @@ import org.springframework.stereotype.Component;
 
 import javax.validation.Valid;
 
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
+
 @Component
 public class UserConverter {
 

@@ -11,6 +11,12 @@ import org.springframework.stereotype.Component;
 import java.nio.charset.Charset;
 import java.util.Base64;
 
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
+
 @Component
 public class CredentialsIsValid implements RequestRules {
 
