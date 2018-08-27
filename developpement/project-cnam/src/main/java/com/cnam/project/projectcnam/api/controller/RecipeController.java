@@ -14,8 +14,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.List;
 
 import static com.google.common.base.Preconditions.checkArgument;
+
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
 
 @RestController
 public class RecipeController implements RecipeApi {
@@ -46,5 +53,17 @@ public class RecipeController implements RecipeApi {
         return new ResponseEntity<Recipe>(recipeCreated, HttpStatus.CREATED);
     }
 
+    @Override
+    public ResponseEntity<List<Recipe>> recipeFind() {
 
+        logger.debug("[recipeCreate] is called.");
+
+        requestValidator.validateRequest();
+
+        Credentials credentials = requestValidator.getCredentials();
+
+        List<Recipe> recipeList = recipeService.recipeFind(credentials);
+
+        return new ResponseEntity<List<Recipe>>(recipeList, HttpStatus.OK);
+    }
 }

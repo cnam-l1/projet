@@ -11,6 +11,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
+
 @Component
 public class IngredientConverter {
 

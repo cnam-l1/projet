@@ -1,6 +1,6 @@
 package com.cnam.project.projectcnam.bdd.repository;
 
-import com.cnam.project.projectcnam.bdd.DTO.RecipeDTO;
+import com.cnam.project.projectcnam.bdd.DTO.ShoppingDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +13,8 @@ import java.util.List;
  */
 
 @Repository
-public interface RecipeRepository extends JpaRepository<RecipeDTO, Long> {
+public interface ShoppingRepository extends JpaRepository<ShoppingDTO, Long> {
 
-    public List<RecipeDTO> findByIdUser(Integer idUser);
+    public List<ShoppingDTO> findByIdUser(Integer idUser);
+
 }

@@ -1,15 +1,15 @@
 swagger: "2.0"
 info:
   description: ""
-  version: "1.0.0"
-  title: "Easy eat"
+  version: "1.0.1"
+  title: "API Public"
   x-logo:
     url: "/redoc/logo.png"
     backgroundColor: "#FFFFFF"
-# host: "localhost:8080"
-# basePath: "/"
-# schemes:
-# - "http"
+host: "localhost:8080"
+basePath: "/"
+schemes:
+- "http"
 produces:
 - "application/json;charset=utf-8"
 tags:
@@ -64,11 +64,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -119,11 +114,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -177,11 +167,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -219,11 +204,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -268,11 +248,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -326,11 +301,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -382,11 +352,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -426,9 +391,51 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
+        500:
+          description: "Internal Server Error\n\nList of supported error codes:\n\
+            - 1: Internal error"
+          schema:
+            $ref: "#/definitions/Error"
+  /shoppings:
+    post:
+      tags:
+      - "Shopping"
+      consumes:
+      - "application/json;charset=utf-8"
+      produces:
+      - "application/json;charset=utf-8"
+      operationId: "shoppingCreate"
+      summary: "Create a Shopping List."
+      description: ""
+      deprecated: false
+      parameters:
+      - name: "Shopping"
+        required: true
+        in: "body"
+        description: ""
+        schema:
+          $ref: "#/definitions/Shopping"
+      responses:
+        201:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Shopping"
+        400:
+          description: "Bad Request\n\nList of supported error codes:\n- 20: Invalid\
+            \ URL parameter value\n- 21: Missing body\n- 22: Invalid body\n- 23: Missing\
+            \ body field\n- 24: Invalid body field\n- 25: Missing header\n- 26: Invalid\
+            \ header value\n- 27: Missing query-string parameter\n- 28: Invalid query-string\
+            \ parameter value"
+          schema:
+            $ref: "#/definitions/Error"
+        401:
+          description: "Unauthorized\n\nList of supported error codes:\n- 40: Missing\
+            \ credentials\n- 41: Invalid credentials\n- 42: Expired credentials"
+          schema:
+            $ref: "#/definitions/Error"
+        404:
+          description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
+            \ not found"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -436,7 +443,6 @@ paths:
             - 1: Internal error"
           schema:
             $ref: "#/definitions/Error"
-  /shoppings:
     get:
       tags:
       - "Shopping"
@@ -469,11 +475,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -520,11 +521,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -562,11 +558,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -616,11 +607,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -658,11 +644,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -707,11 +688,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -765,11 +741,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -821,11 +792,6 @@ paths:
             \ not found"
           schema:
             $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
-          schema:
-            $ref: "#/definitions/Error"
         500:
           description: "Internal Server Error\n\nList of supported error codes:\n\
             - 1: Internal error"
@@ -863,11 +829,6 @@ paths:
         404:
           description: "Not Found\n\nList of supported error codes:\n- 60: Resource\
             \ not found"
-          schema:
-            $ref: "#/definitions/Error"
-        412:
-          description: "Precondition Failed\n\nList of supported error codes:\n- 65:\
-            \ Precondition failed"
           schema:
             $ref: "#/definitions/Error"
         500:
@@ -933,6 +894,10 @@ definitions:
         $ref: "#/definitions/MeasureUnit"
       category:
         $ref: "#/definitions/Category"
+      quantity:
+        description: ""
+        type: "integer"
+        format: "int32"
   User:
     description: "This class represents a user of <nom de l'application>."
     required:
@@ -987,13 +952,8 @@ definitions:
       nbPeople:
         description: "Number of people expected for the recipe."
         type: "integer"
+        format: "int32"
       ingredientList:
         type: "array"
         items:
           $ref: "#/definitions/Ingredient"
-# Added by API Auto Mocking Plugin
-host: virtserver.swaggerhub.com
-basePath: /cnam-l11/unKnown/1.0.0
-schemes:
- - https
- - http

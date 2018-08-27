@@ -5,6 +5,12 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
+
 @Service
 public class PasswordValidator {
 

@@ -2,6 +2,12 @@ package com.cnam.project.projectcnam.security.passwordValidator;
 
 import com.cnam.project.projectcnam.security.exception.PasswordException;
 
+/**
+ * Developed by Hugo Seban
+ * Date : 16/06/2018
+ * email : hugoseban@icloud.com
+ */
+
 public class PasswordContainsUpperCase implements PasswordRules {
 
     @Override
