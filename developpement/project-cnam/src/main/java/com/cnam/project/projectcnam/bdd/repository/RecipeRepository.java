@@ -16,4 +16,5 @@ import java.util.List;
 public interface RecipeRepository extends JpaRepository<RecipeDTO, Long> {
 
     public List<RecipeDTO> findByIdUser(Integer idUser);
+
 }

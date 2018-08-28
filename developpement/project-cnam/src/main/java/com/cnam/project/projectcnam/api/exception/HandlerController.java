@@ -47,7 +47,7 @@ public class HandlerController {
         return new ResponseEntity<Error>(error, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler( RequestException.class)
+    @ExceptionHandler(RequestException.class)
     public ResponseEntity<Error> RequestExceptionResponse(RequestException re) {
 
         Error error = new Error();
@@ -55,16 +55,6 @@ public class HandlerController {
         error.setCode(HttpStatus.BAD_REQUEST.value());
 
         return new ResponseEntity<Error>(error, HttpStatus.BAD_REQUEST);
-    }
-
-    @ExceptionHandler(UnauthorizedException.class)
-    public ResponseEntity<Error> unauthorizedResponse(UnauthorizedException ue) {
-
-        Error error = new Error();
-        error.setMessage(ue.getMessage());
-        error.setCode(HttpStatus.UNAUTHORIZED.value());
-
-        return new ResponseEntity<Error>(error, HttpStatus.UNAUTHORIZED);
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
