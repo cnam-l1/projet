@@ -33,6 +33,8 @@ public class ShoppingConverter {
 
     public ShoppingDTO convertShoppingClientInShoppingDTO(@Valid Shopping shopping, String idUser) {
 
+        logger.debug("[convertShoppingClientInShoppingDTO] is called. shopping.idHash : {}", shopping.getIdShopping());
+
         ShoppingDTO shoppingDTO = new ShoppingDTO();
 
         shoppingDTO.setDate(shopping.getDate());
@@ -43,6 +45,8 @@ public class ShoppingConverter {
     }
 
     public Shopping convertShoppingDTOInShopping(ShoppingDTO shoppingDTO) {
+
+        logger.debug("[convertShoppingDTOInShopping] is called. shoppingDTO.idHash : {}", shoppingDTO.getIdHashShopping());
 
         Shopping shopping = new Shopping();
 

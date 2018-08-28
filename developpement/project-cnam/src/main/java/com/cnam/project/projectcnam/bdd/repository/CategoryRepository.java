@@ -11,5 +11,4 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface CategoryRepository extends JpaRepository<CategoryDTO, Long> {
-}
+public interface CategoryRepository extends JpaRepository<CategoryDTO, Long> {}
