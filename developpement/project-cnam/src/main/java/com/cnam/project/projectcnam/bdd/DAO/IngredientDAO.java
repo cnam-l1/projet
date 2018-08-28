@@ -5,6 +5,8 @@ import com.cnam.project.projectcnam.bdd.DTO.IngredientDTO;
 import com.cnam.project.projectcnam.bdd.DTO.UserDTO;
 import com.cnam.project.projectcnam.bdd.exception.DAOException;
 import com.cnam.project.projectcnam.bdd.repository.IngredientRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +22,14 @@ import java.util.List;
 @Service
 public class IngredientDAO {
 
+    private Logger logger = LoggerFactory.getLogger(IngredientDAO.class);
+
     @Autowired
     IngredientRepository ingredientRepository;
 
     public IngredientDTO save(IngredientDTO ingredientDTO) {
+
+        logger.debug("[saveIngredient] is called. ingredientDTO.idHash : {}", ingredientDTO.getIdHashIngredient());
 
         try {
 
@@ -36,6 +42,8 @@ public class IngredientDAO {
     }
 
     public List<IngredientDTO> findAll(UserDTO userDTO) {
+
+        logger.debug("[findAll] is called. userDTO.idHasg : {}", userDTO.getIdHashUser());
 
         List<IngredientDTO> ingredientDTOList = new ArrayList<>();
 
@@ -52,6 +60,8 @@ public class IngredientDAO {
 
     public IngredientDTO findByIdHashIngredient(String ingredientIdHash) {
 
+        logger.debug("[findByIdHashIngredient] is called. ingredient.idHash : {}", ingredientIdHash);
+
         IngredientDTO ingredientDTO = ingredientRepository.findByIdHashIngredient(ingredientIdHash);
 
         if (ingredientDTO == null) {
@@ -64,6 +74,8 @@ public class IngredientDAO {
     }
 
     public void deleteByIdHashIngredient(String ingredientIdHash) {
+
+        logger.debug("[deleteByIdHashIngredient] is called. ingredient.idHash : {}", ingredientIdHash);
 
         ingredientRepository.deleteByIdHashIngredient(ingredientIdHash);
     }

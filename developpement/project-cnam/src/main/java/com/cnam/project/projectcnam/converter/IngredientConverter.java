@@ -34,6 +34,8 @@ public class IngredientConverter {
      */
     public IngredientDTO convertIngredientClientInIngredientDTO(Ingredient ingredient) {
 
+        logger.debug("[convertIngredientClientInIngredientDTO] is called. ingredient.id : {}", ingredient.getIdIngredient());
+
         Integer idMeasureUnit = measureUnitService.getIdMesureUnitByName(ingredient.getMeasureUnit());
 
         Integer idCategory = categoryService.getIdCategoryByName(ingredient.getCategory());
@@ -53,6 +55,8 @@ public class IngredientConverter {
      * @return
      */
     public Ingredient convertIngredientDTOInIngredientClient(IngredientDTO ingredientDTO) {
+
+        logger.debug("[convertIngredientDTOInIngredientClient] is called. ingredientDTO.idHash : {}", ingredientDTO.getIdHashIngredient());
 
         Ingredient ingredient = new Ingredient();
 
