@@ -1,6 +1,7 @@
 package com.cnam.project.projectcnam.service;
 
 import com.cnam.project.projectcnam.api.controller.IngredientController;
+import com.cnam.project.projectcnam.api.exception.NotFoundException;
 import com.cnam.project.projectcnam.bdd.DAO.IngredientDAO;
 import com.cnam.project.projectcnam.bdd.DAO.RecipeDAO;
 import com.cnam.project.projectcnam.bdd.DAO.UserDAO;
@@ -100,5 +101,31 @@ public class RecipeService {
         }
 
         return recipeList;
+    }
+
+    public Recipe getRecipe(Credentials credentials, String recipeId) {
+
+        logger.debug("[getRecipe] is called. recipeId : {}", recipeId);
+
+        Recipe recipe = null;
+
+        UserDTO userDTO = userDAO.getUserByLogin(credentials.getLogin());
+
+        List<RecipeDTO> recipeDTOList = recipeDAO.findAll(userDTO.getIdUser().intValue());
+
+        for (RecipeDTO recipeDTO : recipeDTOList) {
+
+            if (recipeDTO.getIdHashRecipe().equals(recipeId)) {
+
+                recipe = recipeConverter.convertRecipeDTOInRecipeClient(recipeDTO);
+            }
+        }
+
+        if (recipe == null) {
+
+            throw new NotFoundException("Recipe not found.");
+        }
+
+        return recipe;
     }
 }
