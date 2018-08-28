@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -62,5 +63,17 @@ public class ShoppingController implements ShoppingApi {
 
     }
 
+    @Override
+    public ResponseEntity<Void> shoppingDelete(@PathVariable("shoppingId") String shoppingId) {
+
+        return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
+    }
+
+    @Override
+    public ResponseEntity<Shopping> shoppingGet(@PathVariable("shoppingId") String shoppingId) {
+
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    }
+    
 
 }

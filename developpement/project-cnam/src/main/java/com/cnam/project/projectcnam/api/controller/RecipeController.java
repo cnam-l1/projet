@@ -84,4 +84,22 @@ public class RecipeController implements RecipeApi {
         return new ResponseEntity<Recipe>(recipe, HttpStatus.OK);
 
     }
+
+    @Override
+    public ResponseEntity<Void> recipeDelete(@PathVariable("recipeId") String recipeId) {
+
+        return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
+    }
+
+    @Override
+    public ResponseEntity<Recipe> recipePatch(@PathVariable("recipeId") String recipeId, @Valid @RequestBody Recipe recipe) {
+
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    }
+
+    @Override
+    public ResponseEntity<Recipe> recipeUpdate(@PathVariable("recipeId") String recipeId, @Valid @RequestBody Recipe recipe) {
+
+        return new ResponseEntity<Recipe>(HttpStatus.NOT_IMPLEMENTED);
+    }
 }
