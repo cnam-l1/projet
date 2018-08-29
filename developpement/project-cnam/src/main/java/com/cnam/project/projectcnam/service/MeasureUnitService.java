@@ -1,10 +1,11 @@
 package com.cnam.project.projectcnam.service;
 
-import com.cnam.project.projectcnam.dao.model.MesureUnitDao;
-import com.cnam.project.projectcnam.dao.repository.MeasureUnitRepository;
-import com.cnam.project.projectcnam.exception.model.InternalServerError;
-import com.cnam.project.projectcnam.exception.model.NotFoundException;
-import io.swagger.model.UnitOfMeasure;
+import com.cnam.project.projectcnam.api.exception.NotFoundException;
+import com.cnam.project.projectcnam.bdd.DTO.MeasureUnitDTO;
+import com.cnam.project.projectcnam.bdd.repository.MeasureUnitRepository;
+import io.swagger.model.MeasureUnit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,36 +20,46 @@ import java.util.List;
 @Service
 public class MeasureUnitService {
 
+    private Logger logger = LoggerFactory.getLogger(MeasureUnitService.class);
+
     @Autowired
     MeasureUnitRepository measureUnitRepository;
 
-    public Integer getIdMesureUnitByName(UnitOfMeasure unitOfMeasure) {
+    public Integer getIdMesureUnitByName(MeasureUnit measureUnit) {
 
-        List<MesureUnitDao> mesureUnitDaoList = measureUnitRepository.findAll();
+        logger.debug("[getIdMesureUnitByName] is called. measureUnit : {}", measureUnit.toString());
 
-        for (MesureUnitDao mesureUnitDao : mesureUnitDaoList) {
+        List<MeasureUnitDTO> measureUnitDTOList = measureUnitRepository.findAll();
 
-            if (mesureUnitDao.getName().equals(unitOfMeasure.name())) {
+        for (MeasureUnitDTO measureUnitDTO : measureUnitDTOList) {
 
-                return mesureUnitDao.getIdMesureUnit().intValue();
+            if (measureUnitDTO.getName().equals(measureUnit.toString())) {
+
+                logger.debug("[getIdMesureUnitByName] measur unit is find. measureUnit : {}", measureUnitDTO.getName());
+
+                return measureUnitDTO.getIdMesureUnit().intValue();
             }
         }
 
-        throw new NotFoundException("Category is not found.");
+        throw new NotFoundException("Measure unit is not found.");
     }
 
     public String getMeasureUnitNameById(Integer idMeasureUnit) {
 
-        List<MesureUnitDao> mesureUnitDaoList = measureUnitRepository.findAll();
+        logger.debug("[getMeasureUnitNameById] is called. idMeasureUnit : {}", idMeasureUnit);
 
-        for (MesureUnitDao measureUnitDao : mesureUnitDaoList) {
+        List<MeasureUnitDTO> measureUnitDTOList = measureUnitRepository.findAll();
 
-            if (measureUnitDao.getIdMesureUnit().equals(idMeasureUnit)) {
+        for (MeasureUnitDTO measureUnitDao : measureUnitDTOList) {
+
+            if (measureUnitDao.getIdMesureUnit().intValue() == idMeasureUnit) {
+
+                logger.debug("[getIdgetMeasureUnitNameByIdMesureUnitByName] is find. measureUnitDao.name : {}", measureUnitDao.getName());
 
                 return measureUnitDao.getName();
             }
         }
 
-        throw new InternalServerError("An error occured.");
+        throw new NotFoundException("Measure unit is not found.");
     }
 }
