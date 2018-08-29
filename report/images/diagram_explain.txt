@@ -1,0 +1,69 @@
+package configuration
+====================
+
+package de configuration pour spring, injection de dependence qui n'est pas ds maven
+
+===========
+package api
+============
+
+represente les points d'entrees de l'api avec le client
+
+        Controller
+        ==========
+        implemente les interface generees a partir du fichier swagger, les end points
+        ingredient, recipe, shopping, user, representant le model de donnees qui vont etre manipulees.
+
+
+==============
+package bdd
+==============
+
+les methode qui vont permettre l'interrogation de la base de donnees.
+        =============
+        DAO
+        =============
+        explain definition dao
+
+        =============
+        DTO
+        ============
+        modele de donnee qui vas etre echange entre le serveur et la bdd
+
+
+        ====================
+        repository
+        ===================
+        toutes les interfaces de JPA (api qui te permet faire requete sql haut niveau la bdd et le serveur)
+
+
+===============
+security
+==============
+le package qui verifie le login et password des requettes.
+Creer un systeme d'authentification permettant de securiser le login et le pasword de l'utilisateur du client
+
+        =================
+        password validator
+        =================
+        check si le password est conforme au format definit par l'api
+
+        ================
+        model
+        ===============
+        donnee login password
+
+        ===================
+        request validator
+        ===================
+        recupere ds la requette http le header (basic) chaine de caracteres
+        dechiffre et recuupere login + password
+
+
+===================
+service
+==================
+intermediare entre les controlleurs et la bdd, logique metier
+design pattern service controlleur
+
+

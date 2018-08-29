@@ -1,0 +1,37 @@
+Liste de composants
+
+Spring
+-------------------------------
+framework java ee
+
+choisi car les annotations permettent de coder plus facilement le cote serveur.
+Tomcat = serveur apache
+
+
+Maven
+
+Gestionnaire de dependances
+
+
+JPA
+--------------------------------
+
+java persistance api, annotation qui permettent de definir des classes sql
+
+connexion entre le code et la bdd
+
+
+Hibernate
+-------------------------------
+framework qui permet de faire des requetes sql plus haut niveau
+gere connexion base de donnnees
+
+
+Swagger
+-------------------------------
+
+outils qui permet de definir une api, documentation de l'api pour montrer au client
+comment l'api fonctionne
+
+
+spring.fox permet de reccuperer le json du swagger et le transformer en classe
